@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANONYMOUS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <style>
+    .card:hover {
+      transform: scale(1.1);
+      z-index: 100;
+    }
+  </style> 
+
+<!--CALCULATOR'S PART START -->
+
+<title><b>
+  Scientific Calculator using HTML, CSS and Js
+  </b>
+</title>
+
+<!-- CSS property to create interactive
+  calculator interface -->
+<style>
+
+  /* Style to set the title of calculator */
+  .title {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 25px;
+    font-weight:bold;
+    text-align:center;
+    width: 447px;
+    color:black;
+    background-color:orange;
+    border: solid black 2px;
+    align-items:center;
+  }
+  
+  /* Set the button style */
+  #btn {
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+  }
+  
+  input[type="button"] {
+    background-color:orange;
+    color: black;
+    border: solid black 2px;
+    width:100%
+  }
+  
+  /* Set input textarea */
+  input[type="text"] {
+    background-color:white;
+    border: solid black 2px;
+    width:100%
+  }
+  
+</style>
+
+<script>
+  
+  /* Creating function in HTML for backspace operation */
+  function backspace(calc) {											
+    size = calc.display.value.length;
+    calc.display.value = calc.display.value.substring(0, size-1);
+  }
+  
+  /* Creating function to calculate factorial of element */
+  function calculate(calc) {
+    
+    /* Check if function include ! character then
+    calculate factorial of number */
+    if(calc.display.value.includes("!")) {
+      
+      size = calc.display.value.length;
+      n = Number(calc.display.value.substring(0, size-1));
+      f = 1;
+      
+      for(i = 2; i <= n; i++)
+        f = f*i;
+      calc.display.value = f;
+    }
+    
+    /* If function include % character then calculate
+    the % of number */
+    else if(calc.display.value.includes("%")) {
+      
+      size = calc.display.value.length;
+      n = Number(calc.display.value.substring(0, size-1));
+      calc.display.value = n/100;
+    }
+
+    else
+      /* Otherwise evaluate and execute output */
+      calc.display.value = eval(calc.display.value);
+  }
+</script>
+<!--CALCULATOR'S PART END -->
+
+</head>
+
+<body>
+
+  <h1  align="center" style="color:red; text-shadow: 10px; text-decoration-line: underline; text-decoration-color: black;">ANONYMOUS</h1>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">More</a></li>
+           <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>-->
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+            <a href="D:\Vs Code Studio Practice\Login.html" target="_about blank"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+            <a href="D:\Vs Code Studio Practice\signup.html" target="_about blank"><button type="button" class="btn btn-warning"  >Sign-up</button></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="D:\Downloads\christopher-gower-m_HRfLhgABo-unsplash.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color:blue" ,>ADVANCE ETHICAL HACKING!</h5>
+          <p style="color:blue">Under The Best Hackers in INDIA.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Downloads\christopher-gower-m_HRfLhgABo-unsplash.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color:blue">ADVANCE PROGAMMING </h5>
+          <p style="color:blue">Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Downloads\christopher-gower-m_HRfLhgABo-unsplash.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="COLOR:RED">ADVANCE CERTIFICATION COURCES</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+<!--CALCULATOR START-->
+<br>
+<div class = title >
+  Scientific Calculator By SHRI.331
+</div>
+
+<form name = "calc">
+  
+<table id = "calc" border = 4 align="center">
+  
+<tr>
+  <td colspan=5><input id="btn" name="display"
+    onkeypress="return event.charCode >= 48
+    && event.charCode <= 57" type="text">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="1"
+      OnClick="calc.display.value+='1'">
+  </td>
+  
+  <td><input id="btn" type="button" value="2"
+      OnClick="calc.display.value+='2'">
+  </td>
+  
+  <td><input id="btn" type="button" value="3"
+      OnClick="calc.display.value+='3'">
+  </td>
+  
+  <td><input id="btn" type="button" value="C"
+      OnClick="calc.display.value=''">
+  </td>
+  <td><input id="btn" type="button" value="<-"
+      OnClick="backspace(this.form)">
+  </td>
+  <td><input id="btn" type="button" value="="
+      OnClick="calculate(this.form)">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="4"
+      OnClick="calc.display.value+='4'">
+  </td>
+  
+  <td><input id="btn" type="button" value="5"
+      OnClick="calc.display.value+='5'">
+  </td>
+  
+  <td><input id="btn" type="button" value="6"
+      OnClick="calc.display.value+='6'">
+  </td>
+  
+  <td><input id="btn" type="button" value="-"
+      OnClick="calc.display.value='-'">
+  </td>
+  
+  <td><input id="btn" type="button" value="%"
+      OnClick="calc.display.value+='%'">
+  </td>
+  
+  <td><input id="btn" type="button" value="cos"
+      OnClick="calc.display.value='Math.cos('">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="7"
+      OnClick="calc.display.value+='7'">
+  </td>
+  
+  <td><input id="btn" type="button" value="8"
+      OnClick="calc.display.value+='8'">
+  </td>
+  
+  <td><input id="btn" type="button" value="9"
+      OnClick="calc.display.value+='9'">
+  </td>
+  
+  <td><input id="btn" type="button" value="*"
+      OnClick="calc.display.value+='*'">
+  </td>
+  
+  <td><input id="btn" type="button" value="n!"
+      OnClick="calc.display.value+='!'">
+  </td>
+  
+  <td><input id="btn" type="button" value="sin"
+      OnClick="calc.display.value='Math.sin('">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="."
+      OnClick="calc.display.value+='.'">
+  </td>
+  
+  <td><input id="btn" type="button" value="0"
+      OnClick="calc.display.value+='0'">
+  </td>
+  
+  <td><input id="btn" type="button" value=","
+      OnClick="calc.display.value+=','">
+  </td>
+  
+  <td><input id="btn" type="button" value="+"
+      OnClick="calc.display.value+='+'">
+  </td>
+  
+  <td><input id="btn" type="button" value="/"
+      OnClick="calc.display.value+='/'">
+  </td>
+  
+  <td><input id="btn" type="button" value="tan"
+      OnClick="calc.display.value='Math.tan('">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="E"
+      OnClick="calc.display.value+='Math.E'">
+  </td>
+  
+  <td><input id="btn" type="button" value="pi"
+      OnClick="calc.display.value+='Math.PI'">
+  </td>
+  
+  <td><input id="btn" type="button" value="^"
+      OnClick="calc.display.value+='Math.pow('">
+  </td>
+  
+  <td><input id="btn" type="button" value="("
+      OnClick="calc.display.value+='('">
+  </td>
+  
+  <td><input id="btn" type="button" value=")"
+      OnClick="calc.display.value+=')'">
+  </td>
+  
+  <td><input id="btn" type="button" value="log"
+      OnClick="calc.display.value='Math.log('">
+  </td>
+</tr>
+
+<tr>
+  <td><input id="btn" type="button" value="sqrt"
+      OnClick="calc.display.value+='Math.sqrt('">
+  </td>
+  
+  <td><input id="btn" type="button" value="ln2"
+      OnClick="calc.display.value+='Math.LN2'">
+  </td>
+  
+  <td><input id="btn" type="button" value="ln10"
+      OnClick="calc.display.value+='Math.Log10'">
+  </td>
+  
+  <td><input id="btn" type="button" value="l2e"
+      OnClick="calc.display.value+='Math.LOG2E'">
+  </td>
+  
+  <td><input id="btn" type="button" value="l10e"
+      OnClick="calc.display.value+='Math.log10'">
+  </td>
+  
+  <td><input id="btn" type="button" value="exp"
+      OnClick="calc.display.value='Math.exp('">
+  </td>
+</tr>
+</table>
+</form>
+
+
+<br>
+<!--CALCULATOR END -->
+
+
+
+<!--Part of card -->
+
+<div class="Books" style="margin-top:10px ;">
+  
+  <h2 style="border: 2px solid black;" align="center">Our Best Collections For You !</h2>
+
+  <hr>
+</div>
+
+ 
+
+  <!-- First CArd -->
+
+
+  <div style="margin: down 20px; margin-top:10PX ;">
+
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-right:280px; margin-left:50px; ">
+      <img class="card-img-top" src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-right:280px; margin-right: 10px;">
+      <img class="card-img-top"
+        src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-left:280px; margin-right:20px;;">
+      <img class="card-img-top" src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+
+    <!-- Second CArd -->
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-right:280px; margin-left:50px; margin-top:20px;">
+      <img class="card-img-top" src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-right:280px; margin-right: 10px;">
+      <img class="card-img-top"
+        src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+
+    <div class="card"
+      style="width: 18rem; box-shadow: 2px 2px 10px ; display:inline-block; margin-left:280px; margin-right:20px;;">
+      <img class="card-img-top" src="https://m.media-amazon.com/images/I/51p0f9Q6zEL.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="https://www.amazon.in/Hacking-Complete-Beginners-Learning-Practical-ebook/dp/B078GZKCMS"
+          target="_blank" class="btn btn-primary">By It Now!</a>
+      </div>
+    </div>
+
+<!-- CARD END -->
+ 
+
+<footer class="py-3 my-4" >
+  <ul class="nav justify-content-center border-bottom pb-3 mb-3" style="margin-top:100px ;">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+  </ul>
+  <p class="text-center text-muted">ANONYMOUS © 2022 Company, Inc</p>
+</footer>
+  
+
+
+</body>
+
+</html> 
